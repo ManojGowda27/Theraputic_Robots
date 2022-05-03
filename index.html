@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HRI-Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+
+
+    <div class="select-hand">
+      <select>
+          <option value="">Choose Hand</option>
+          <option value="">Left</option>
+          <option value="">Right</option>
+      </select>
+
+      
+
+      <button class="fingers">Finger(s) in Use</button>
+      <div class="fingers-list">
+      <input type="radio" value="Thumb">    
+      <label>Thumb</label><br>
+      <input type="radio" value="Index">  
+      <label>Index</label><br>
+      <input type="radio" value="Middle">  
+      <label>Middle</label><br>
+      <input type="radio" value="Ring">  
+      <label>Ring</label><br>
+      <input type="radio" value="Small">  
+      <label>Small</label>
+    
+    <div class="select-mode">
+        <select>
+            <option value="">Choose Mode</option>
+            <option value="">Exercise</option>
+            <option value="">Mirror</option>
+        </select>
+    </div>
+    </div>
+
+
+    <button class="r-status">Robot Status</button>
+    <div class="r-status-list">
+      <input type="radio" value="Thumb">    
+    <label>Standby</label><br>
+    <input type="radio" value="Thumb">  
+    <label>Working</label><br>
+    <input type="radio" value="Thumb">  
+    <label>Waiting</label><br>
+    </div>
+
+    
+
+    <div class="container">
+      <h1 class="screen">
+        <span id="minutes">
+          00
+        </span>:<span id="seconds">
+          00
+        </span>:<span id="hundredths">
+          00
+        </span>
+      </h1>
+      <div class="buttons">
+        <button id="start">START</button>
+        <button id="stop">STOP</button>
+        <button id="reset">RESET</button>
+      </div>
+    </div>
+
+    <div>
+      <button class="force">Force on Finger(s)</button>
+      <button class="force-fingers">Thumb</button>
+      <button class="force-fingers1">Index</button>
+      <button class="force-fingers2">Middle</button>
+      <button class="force-fingers3">Ring</button>
+      <button class="force-fingers4">Small</button>
+    </div>
+
+    <div class="force-list">
+      <span class="minus">-</span>
+      <span class="num">01</span>
+      <span class="plus">+</span>
+    </div>
+
+    <div class="force-list1">
+      <span class="minus">-</span>
+      <span class="num">01</span>
+      <span class="plus">+</span>
+    </div>
+
+    <div class="force-list2">
+      <span class="minus">-</span>
+      <span class="num">01</span>
+      <span class="plus">+</span>
+    </div>
+
+    <div class="force-list3">
+      <span class="minus">-</span>
+      <span class="num">01</span>
+      <span class="plus">+</span>
+    </div>
+
+    <div class="force-list4">
+      <span class="minus">-</span>
+      <span class="num">01</span>
+      <span class="plus">+</span>
+    </div>
+
+    <div class="d-force">
+      <button class="d-force-btn">Default Forces</button>
+      <button></button>
+      <button></button>
+      <button></button>
+      <button></button>
+    </div>
+
+    <script>
+      const plus = document.querySelector(".plus"), minus = document.querySelector(".minus"), num = document.querySelector(".num");
+
+      let a = 1;
+
+      plus.addEventListener("click", ()=>{
+        a++;
+        a = (a < 10) ? "0" + a: a;
+        num.innertext(a)
+        
+      });
+    </script>
+
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
